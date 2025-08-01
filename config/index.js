@@ -1,7 +1,7 @@
 module.exports = {
   // Bot configuration
-  telegram_bot_token: "8163103906:AAEAi4JBJsdcvyzd5ncdL6JBcpp7a_Bn6rU",
-  creator_telegram_id: "1914807690",
+  telegram_bot_token: "8030897383:AAEKEgRenaELYI7LGq2rrAWDbY4aCsz-a8Q",
+  creator_telegram_id: "8171834446",
   
   // Database configuration
   mongodb_uri: process.env.MONGODB_URI || "mongodb://mongo:27017/p1_database",
