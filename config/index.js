@@ -4,7 +4,7 @@ module.exports = {
   creator_telegram_id: "8171834446",
   
   // Database configuration
-  mongodb_uri: process.env.MONGODB_URI || "mongodb://mongo:27017/p1_database",
+  mongodb_uri: process.env.MONGODB_URI || "mongodb://localhost:27017/p1_database",
   
   // Server configuration
   port: process.env.PORT || 3000,
