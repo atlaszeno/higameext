@@ -20,7 +20,7 @@ module.exports = {
   
   // Asterisk configuration
   asterisk: {
-    host: "localhost",
+    host: "asterisk-p1",
     port: 5038,
     username: "admin",
     password: "p1manager123"
