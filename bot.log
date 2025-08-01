@@ -1,0 +1,7 @@
+
+=== ASYNCHRONOUS DTMF CONFIRMATION SYSTEM ===
+Type "<number> y" or "<number> n" to confirm DTMF for calls
+Example: "+1234567890 y" or "+1234567890 n"
+Type "help" for commands, "list" to see pending confirmations
+
+DTMF> Port 3000 is already in use

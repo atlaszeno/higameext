@@ -1,0 +1,28 @@
+{
+  "scripts": {
+    "dev": "bun --watch ./bin/www "
+  },
+  "dependencies": {
+    "asterisk-manager": "^0.2.0",
+    "axios": "^1.7.9",
+    "compression": "^1.7.5",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "express-async-handler": "^1.2.0",
+    "google-tts-api": "^2.0.2",
+    "gtts": "^0.2.1",
+    "helmet": "^8.0.0",
+    "http-errors": "^2.0.0",
+    "jade": "^1.11.0",
+    "mongoose": "^8.9.5",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "node-fetch": "^3.3.2",
+    "node-telegram-bot-api": "^0.66.0",
+    "p-limit": "^6.2.0",
+    "sip": "^0.0.6",
+    "sip.js": "^0.21.2",
+    "uuid": "^10.0.0"
+  }
+}

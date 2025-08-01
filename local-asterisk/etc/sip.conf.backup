@@ -1,0 +1,21 @@
+[general]
+disable = yes                      ; Disable SIP (only use for PJSIP if needed)
+externip = 194.114.136.103        ; Your public IP address
+localnet = 192.168.1.0/24          ; Your local network (adjust the subnet accordingly)
+nat = force_rport,comedia         ; Enable NAT handling
+
+[main]
+type = peer
+host = 185.196.9.38               ; Your SIP provider's host
+username = testaccount            ; Your SIP username
+secret = Qwerty8                  ; Your SIP password
+fromuser = testaccount            ; Username for "From" header in SIP requests
+fromdomain = 185.196.9.38         ; SIP domain
+context = outbound                ; Context for outbound calls
+insecure = port,invite            ; Allow calls with missing port and invite headers
+nat = force_rport,comedia         ; Correct handling of NAT and RTP
+disallow = all                    ; Disallow all codecs
+allow = ulaw                      ; Allow only ulaw codec
+canreinvite = no                  ; Prevent media reinvites (important for NAT)
+directmedia = no                  ; Disable direct media (important for NAT handling)
+qualify = yes                     ; Enable periodic connection health checks

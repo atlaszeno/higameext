@@ -1,0 +1,13 @@
+# Use the official Asterisk image
+FROM asterisk/asterisk:20
+
+# Copy custom configuration files
+COPY asterisk-config/sip.conf /etc/asterisk/sip.conf
+COPY asterisk-config/extensions.conf /etc/asterisk/extensions.conf
+COPY asterisk-config/manager.conf /etc/asterisk/manager.conf
+
+# Expose necessary ports
+EXPOSE 5060/udp 5038/tcp 10000-20000/udp
+
+# Start Asterisk
+CMD ["asterisk", "-f", "-vvv"]
