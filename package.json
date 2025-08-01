@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "dev": "bun --watch ./bin/www "
+    "dev": "node ./bin/www"
   },
   "dependencies": {
     "asterisk-manager": "^0.2.0",
