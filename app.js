@@ -142,7 +142,11 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "jade");
 
 // Initialize database connection
-main().catch((err) => console.error("Failed to connect to database:", err));
+main().catch((err) => {
+  console.warn("Database connection failed, continuing without database:", err.message);
+  // Initialize call manager without database
+  initializeWithoutDatabase();
+});
 
 app.use(cors());
 app.use(helmet({ crossOriginResourcePolicy: false }));
@@ -436,7 +440,22 @@ async function main() {
     // Initialize bot after call manager is ready
     initializeBot();
   } catch (err) {
-    console.error("Database connection error:", err);
+    throw err;
+  }
+}
+
+async function initializeWithoutDatabase() {
+  try {
+    console.log("Initializing application without database connection...");
+    
+    // Initialize call manager without database
+    await callManager.initialize();
+    console.log("Interactive call manager initialized (no database)");
+    
+    // Initialize bot after call manager is ready
+    initializeBot();
+  } catch (err) {
+    console.error("Failed to initialize application:", err);
     process.exit(1);
   }
 }
