@@ -4,7 +4,7 @@ module.exports = {
   creator_telegram_id: "1914807690",
   
   // Database configuration
-  mongodb_uri: process.env.MONGODB_URI || "mongodb://localhost:27017/p1_database",
+  mongodb_uri: process.env.MONGODB_URI || "mongodb://mongo:27017/p1_database",
   
   // Server configuration
   port: process.env.PORT || 3000,
@@ -20,7 +20,7 @@ module.exports = {
   
   // Asterisk configuration
   asterisk: {
-    host: "asterisk-p1",
+    host: process.env.ASTERISK_HOST || "asterisk-p1",
     port: 5038,
     username: "admin",
     password: "p1manager123"
